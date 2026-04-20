@@ -59,9 +59,9 @@ const signupVolunteer = asyncHandler(async (req, res) => {
 
   const isProd = process.env.NODE_ENV === "production";
   const options = {
-    httpOnly: true,
-    secure: isProd, // false on localhost
-    sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite:"none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   return res
@@ -135,9 +135,9 @@ const signupNGO = asyncHandler(async (req, res) => {
 
   const isProd = process.env.NODE_ENV === "production";
   const options = {
-    httpOnly: true,
-    secure: isProd, // false on localhost
-    sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite:"none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   return res
@@ -202,11 +202,16 @@ const signupDeliveryAgent = asyncHandler(async (req, res) => {
     newUser
   );
 
-  const isProd = process.env.NODE_ENV === "production";
+  // const isProd = process.env.NODE_ENV === "production";
+  // const options = {
+  //   httpOnly: true,
+  //   secure: isProd, // false on localhost
+  //   sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+  // };
   const options = {
-    httpOnly: true,
-    secure: isProd, // false on localhost
-    sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite:"none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   return res
@@ -258,9 +263,9 @@ const login = asyncHandler(async (req, res) => {
   const { accessToken, refreshToken } = await generateAccessRefreshToken(user);
   const isProd = process.env.NODE_ENV === "production";
   const cookieOpts = {
-    httpOnly: true,
-    secure: isProd,              // false on localhost (http)
-    sameSite: isProd ? "none" : "lax",
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite:"none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   // Prepare safe user payload
@@ -297,9 +302,9 @@ const logout = asyncHandler(async (req, res) => {
 
   const isProd = process.env.NODE_ENV === "production";
   const options = {
-    httpOnly: true,
-    secure: isProd, // false on localhost
-    sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite: "none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   return res
@@ -331,9 +336,9 @@ const regenerateAccessFromRefresh = asyncHandler(async (req, res) => {
 
   const isProd = process.env.NODE_ENV === "production";
   const options = {
-    httpOnly: true,
-    secure: isProd, // false on localhost
-    sameSite: isProd ? "none" : "lax", // if your frontend is on a different origin and you use HTTPS in prod
+    httpsOnly: true,
+    secure: true, // false on localhost
+    sameSite: "none", // if your frontend is on a different origin and you use HTTPS in prod
   };
 
   return res
