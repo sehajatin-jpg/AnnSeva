@@ -1,0 +1,59 @@
+.deliveryHomeContainer {
+    padding: 100px 40px 40px;
+    background: linear-gradient(135deg, #f6fff9, #e0f5e7);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .heroSection {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .heroSection h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+  
+  .heroSection p {
+    font-size: 18px;
+    color: #4b6c5a;
+  }
+  
+  .statsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+  }
+  
+  .statCard {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(75, 108, 90, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+  
+  .statCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  }
+  
+  .statCard h2 {
+    font-size: 38px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+  }
+  
+  .statCard p {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  

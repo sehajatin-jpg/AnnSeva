@@ -1,0 +1,43 @@
+.vision-mission-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 60px 40px;
+    background-color: #f9fbef;
+    flex-wrap: wrap;
+  }
+  
+  .vision-box, .mission-box {
+    flex: 1;
+    min-width: 350px;
+    max-width: 600px;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  
+  .vision-box h2,
+  .mission-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .vision-box {
+    color: #000;
+    background-color: transparent;
+  }
+  
+  .mission-box {
+    background-color: #5f7058;
+    color: #fff;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .mission-box:hover {
+    box-shadow: 20px 20px 60px black;
+    border-radius: 50px;
+  }

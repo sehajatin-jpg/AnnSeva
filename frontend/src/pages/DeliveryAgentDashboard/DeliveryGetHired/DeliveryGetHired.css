@@ -1,0 +1,184 @@
+/* ===== Globals ===== */
+:root {
+  /* set this to your actual navbar height */
+  --navbar-height: 72px;
+}
+
+/* ===== Page scaffold ===== */
+.getHiredContainer {
+  padding: calc(var(--navbar-height) + 20px) 24px 40px; /* was 100px top */
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f4fff7, #ecf7ee);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* avoid clipping */
+}
+
+.getHiredContainer h2 {
+  font-size: 32px;
+  color: #2b4739;
+  margin: 0 0 18px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+/* helper messages */
+.info-text,
+.error-text {
+  margin: 6px 0 14px;
+  text-align: center;
+  font-size: 15px;
+}
+.info-text { color: #506a5e; font-style: italic; }
+.error-text { color: #b3261e; font-weight: 600; }
+
+/* ===== Requests grid ===== */
+.requestsGrid {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 6px; /* breathing room under heading */
+}
+
+/* ===== Request card ===== */
+.requestCard {
+  background: #ffffffc9;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid #e6eee8;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  padding: 16px 16px 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  will-change: transform;
+}
+.requestCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.1);
+}
+
+/* Header: NGO name + status badge */
+.reqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.reqNgoName {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2e4a3c;
+  margin: 0;
+}
+.statusBadge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.status-pending   { background: #fff7e6; color: #915f00; border-color: #ffd27a; }
+.status-accepted  { background: #e9f6ec; color: #2f7d32; border-color: #bde5c3; }
+.status-rejected  { background: #fdeaea; color: #a93b3b; border-color: #f2b9b9; }
+
+/* NGO meta + offer details */
+.reqMeta {
+  font-size: 0.92rem;
+  color: #4a5a53;
+  margin: 2px 0 10px;
+  line-height: 1.45;
+}
+.reqMeta p { margin: 2px 0; }
+
+.reqOffer {
+  background: #f7fbf8;
+  border: 1px solid #e5efe8;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 6px;
+}
+.reqOffer p { margin: 2px 0; color: #2f3f39; }
+
+/* Actions */
+.reqActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.primaryBtn,
+.secondaryBtn {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease, background .2s ease, box-shadow .2s ease;
+}
+.primaryBtn {
+  background: #3ca36c; color: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+.primaryBtn:hover { transform: translateY(-1px); filter: brightness(1.03); box-shadow: 0 8px 18px rgba(0,0,0,.1); }
+.secondaryBtn {
+  background: #e45757; color: #fff;
+}
+.secondaryBtn:hover { transform: translateY(-1px); filter: brightness(1.03); }
+
+.primaryBtn:disabled,
+.secondaryBtn:disabled {
+  opacity: .75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Empty / loading states */
+.emptyState {
+  margin-top: 10px;
+  color: #6c7a73;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Optional: small top bar */
+.toolbar {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.refreshBtn {
+  background: #5f7058;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease;
+}
+.refreshBtn:hover { transform: translateY(-1px); background: #4e5e49; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  :root { --navbar-height: 68px; }
+}
+@media (max-width: 600px) {
+  :root { --navbar-height: 64px; }
+  .getHiredContainer { padding: calc(var(--navbar-height) + 16px) 16px 32px; }
+  .getHiredContainer h2 { font-size: 26px; }
+}
+
+/* If you use anchor links/scroll-to, prevent hiding under navbar */
+:target {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
+}

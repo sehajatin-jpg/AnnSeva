@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #fbbc05;
+    --text-dark: #1e2d50;
+    --button-dark: #5f7058;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f9fbef;
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(95, 112, 88, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 55px;
+    width: auto;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 125px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  .icon {
+    font-size: 24px;
+    color: var(--text-dark);
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  .link_text {
+    font-weight: 600;
+    font-size: 12px; 
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease-in-out;
+  }
+  .link:hover {
+    transform: translateY(-4px);
+  }
+  .link:hover .icon {
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  .link:hover .link_text {
+    color: var(--primary-color);
+  }
+  .active .icon,
+  .active .link_text {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .logoutBtn {
+    background: var(--button-dark);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s;
+  }
+  .logoutBtn:hover {
+    background-color: #4c5948;
+  }
+  
+  .logoutIcon {
+    font-size: 18px;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    .navLinks {
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+    }
+  
+    .icon {
+      font-size: 22px;
+    }
+  
+    .link_text {
+      font-size: 11px;
+    }
+  
+    .logoutBtn {
+      margin-top: 10px;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+  }
+  

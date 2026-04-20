@@ -1,0 +1,62 @@
+.sdgSection {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+}
+
+.mainHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.sdgGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Spacing cards evenly */
+  gap: 20px; /* Keeps some space between cards */
+}
+
+.sdgCard {
+  width: 150px;
+  height: 170px;
+  background-color: #ddd;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.sdgCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sdgIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.sdgTitle {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.sdgNumber {
+  font-size: 12px;
+  font-weight: 500;
+  color: #eee;
+}

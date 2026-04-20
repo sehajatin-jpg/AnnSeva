@@ -1,0 +1,91 @@
+.activity-container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    animation: slideUp 0.6s ease;
+  }
+  
+  .activity-container h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e2d50;
+    font-weight: 700;
+  }
+  
+  .activity-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .activity-card {
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    border-left: 6px solid #fbbc05;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .activity-card:hover {
+    background: #f9fbef;
+    transform: scale(1.01);
+  }
+  
+  .activity-card p {
+    margin: 6px 0;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  
+  /* 🔥 Status Colors */
+  .activity-card.awaiting-collection {
+    border-left-color: #fbbc05;
+  }
+  
+  .activity-card.collected-by-ngo {
+    border-left-color: #4285f4;
+  }
+  
+  .activity-card.distributed-to-needy {
+    border-left-color: #34a853;
+  }
+  
+  /* 🌀 Animations */
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.8rem;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3rem;
+  }
+  
+  .activity-card.pending {
+    border-left: 5px solid #ffa500;
+  }
+  
+  .activity-card.completed {
+    border-left: 5px solid #4caf50;
+  }
+  

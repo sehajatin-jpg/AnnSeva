@@ -1,0 +1,270 @@
+/* Section container */
+.ngo-donation-section {
+  margin-top: 50px;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fbef;
+  min-height: 100vh;
+}
+
+/* Main Section Heading (truly centered & responsive) */
+.section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  color: #2e2e2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: "Segoe UI Semibold", sans-serif;
+  border-bottom: 3px solid #ccc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Donation category block */
+.donation-container {
+  background: #ffffffd1;
+  border: 2px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.donation-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Subheadings */
+.donation-subheading {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  font-family: "Segoe UI Semibold", sans-serif;
+  margin-bottom: 1.8rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.4rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+/* No data text */
+.empty-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Grid */
+.donation-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+@media (max-width: 1200px) { .donation-list { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  { .donation-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .donation-list { grid-template-columns: 1fr; } }
+
+/* Cards */
+.donation-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #e4e4e4;
+  position: relative;
+}
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.donation-card h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+.donation-card p {
+  margin: 0.4rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Buttons (generic) */
+.action-buttons {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.action-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.25s ease, opacity 0.2s ease;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.green-btn { background-color: #5f7058; color: #fff; }
+.green-btn:hover { background-color: #4a5746; transform: translateY(-1px); }
+
+.blue-btn { background-color: #2196f3; color: #fff; }
+.blue-btn:hover { background-color: #0b7dda; transform: translateY(-1px); }
+
+/* Assign / Reassign / Cancel row */
+.donation-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Assign / Reassign buttons */
+.assign-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  background: #eef3ea;
+  color: #2e2e2e;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.assign-btn:hover {
+  transform: translateY(-2px);
+  background: #e6eddc;
+  border-color: #d0d7c6;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* NEW: Cancel delivery button (distinct warning style) */
+.cancel-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ffd4cc;
+  background: #fff1ee;
+  color: #b23b2e;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.cancel-btn:hover {
+  transform: translateY(-2px);
+  background: #ffe7e2;
+  border-color: #ffb8ac;
+  box-shadow: 0 8px 22px rgba(178, 59, 46, 0.15);
+}
+
+/* Picker shell */
+.assign-picker {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #e4e4e4;
+  background: #f6f9f1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  animation: fadeSlideIn 180ms ease-out;
+}
+
+/* Header */
+.assign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #2e3a29;
+}
+.assign-close {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.assign-close:hover { background: rgba(0, 0, 0, 0.06); transform: scale(1.03); }
+
+/* Destination input (for distribution) */
+.assign-destination { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.assign-destination label { font-size: 0.9rem; color: #334235; font-weight: 600; }
+.assign-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  background: #fff;
+  color: #2e2e2e;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.assign-input:focus { border-color: #8fb28b; box-shadow: 0 0 0 3px rgba(143, 178, 139, 0.25); }
+
+/* Picker select */
+.assign-list { display: flex; gap: 10px; align-items: center; }
+.assign-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  background: #ffffff;
+  color: #2e2e2e;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.assign-select:focus { border-color: #8fb28b; box-shadow: 0 0 0 3px rgba(143, 178, 139, 0.25); }
+
+/* Feedback */
+.error-text { color: #d64545; font-weight: 600; }
+.success-text { color: #2f7d32; font-weight: 600; }
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  margin: 6px 0 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.badge.assigned { color: #2f7d32; background: #e9f6ec; border-color: #bde5c3; }
+.badge.done     { color: #1f7a47; background: #eaf8f1; border-color: #c9f0d1; }
+
+/* Subtle animation */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Small screens: action rows stack cleanly */
+@media (max-width: 680px) {
+  .donation-actions { flex-direction: column; align-items: stretch; }
+  .assign-btn, .action-btn, .cancel-btn { width: 100%; }
+}

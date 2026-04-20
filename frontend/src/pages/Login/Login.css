@@ -1,0 +1,97 @@
+:root {
+    --primary: #fbbc05;
+    --background: #f9fbef;
+    --text: #1e2d50;
+    --accent: #5f7058;
+  }
+  
+  .login-form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--background), #ffffff);
+    padding: 2rem;
+  }
+  
+  .login-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(31, 38, 135, 0.2);
+    padding: 2rem 2.5rem;
+    /* width: 100%;
+    max-width: 420px; */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--text);
+    width: 700px;
+    height: 300px;
+  }
+  
+  .login-card h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .login-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: 1.8px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .login-form input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(251, 188, 5, 0.2);
+    outline: none;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #4c5948;
+  }
+  
+  .error-text {
+    margin-top: 0.5rem;
+    color: #d9534f;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .success-text {
+    margin-top: 0.5rem;
+    color: #28a745;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 1.5rem;
+    }
+  
+    .login-card h2 {
+      font-size: 1.5rem;
+    }
+  }

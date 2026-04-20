@@ -1,0 +1,218 @@
+.hireDeliveryAgentContainer {
+  margin-top: 60px;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #fdfdfd, #f2f6e9);
+  min-height: 100vh;
+}
+
+/* Heading */
+.hireDeliveryAgentContainer h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #374c36;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px #e0e0e0;
+}
+
+/* Top toolbar */
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 auto 16px;
+  max-width: 1200px;
+}
+
+/* View Hired Agents Button */
+.viewHiredBtn {
+  background: linear-gradient(135deg, #5f7058, #6f8264);
+  color: #ffffff;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.viewHiredBtn:hover {
+  background: linear-gradient(135deg, #4e5e49, #5e6e57);
+  transform: translateY(-2px);
+}
+
+/* Section card */
+.sectionWrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  border: 1px solid #e5e5e5;
+}
+
+/* Agent cards grid */
+.agentList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 1.4rem;
+}
+
+/* Individual Agent Card */
+.agentCard {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8e8e8;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.agentCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header + meta */
+.agentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.agentCard h3 {
+  font-size: 1.2rem;
+  color: #374c36;
+  margin: 0;
+  font-weight: 700;
+}
+.agentMeta {
+  color: #6b7a68;
+  font-size: 0.88rem;
+}
+.agentBio {
+  color: #3e4a3d;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.agentCard p {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.97rem;
+  color: #525252;
+}
+
+/* Primary action button */
+.hireBtn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #5f7058, #6f8264);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+.hireBtn:hover {
+  background: linear-gradient(135deg, #4e5e49, #5e6e57);
+  transform: translateY(-1px);
+}
+.hireBtn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* === Expanded form panel (after clicking Send Hire Request) === */
+.hireFormPanel {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  background: #fffffffa;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 160ms ease-out;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.hireFormRow {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.hireFormRow label {
+  font-weight: 700;
+  color: #2f3e2d;
+  font-size: 0.92rem;
+}
+.hireFormRow input {
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffffb3;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.hireFormRow input:hover {
+  background: #ffffff;
+}
+.hireFormRow input:focus {
+  border-color: #8fb28b;
+  box-shadow: 0 0 0 3px rgba(143,178,139,0.2);
+  background: #fff;
+}
+
+/* Form actions */
+.hireFormActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.cancelBtn {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #ececec;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.cancelBtn:hover {
+  background: #e2e2e2;
+}
+
+/* Messages */
+.error-text {
+  color: #d64545;
+  font-weight: 700;
+}
+.success-text {
+  color: #2f7d32;
+  font-weight: 700;
+  margin-top: 6px;
+}
+.loading-text {
+  color: #6b7a68;
+  font-style: italic;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .sectionWrapper { padding: 1.25rem; }
+  .agentList { gap: 1rem; }
+  .agentCard { padding: 1rem; }
+  .hireDeliveryAgentContainer h2 { font-size: 2rem; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

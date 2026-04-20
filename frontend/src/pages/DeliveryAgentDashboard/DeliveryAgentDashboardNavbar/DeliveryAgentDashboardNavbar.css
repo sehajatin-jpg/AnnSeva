@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #fbbc05;
+  --text-dark: #1e2d50;
+  --button-dark: #5f7058;
+  --background-blur: rgba(249, 251, 239, 0.6);
+  --glass-border: rgba(95, 112, 88, 0.2);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--background-blur);
+  backdrop-filter: blur(12px);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--glass-border);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 125px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.icon {
+  font-size: 24px;
+  color: var(--text-dark);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.link_text {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.link:hover .icon {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.link:hover .link_text {
+  color: var(--primary-color);
+}
+
+.active .icon,
+.active .link_text {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.logoutBtn {
+  background: var(--button-dark);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #4c5948;
+  transform: translateY(-2px);
+}
+
+.logoutIcon {
+  font-size: 18px;
+}
+
+.activityLink {
+  position: relative;
+}
+
+.activityBadge {
+  position: absolute;
+  top: -4px;
+  right: 18px;
+  background: #e63946;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  animation: popIn 0.3s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .link {
+    width: 90px;
+    padding: 5px 8px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .link_text {
+    font-size: 11px;
+  }
+
+  .logoutBtn {
+    margin-top: 10px;
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .activityBadge {
+    top: -2px;
+    right: 10px;
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+}

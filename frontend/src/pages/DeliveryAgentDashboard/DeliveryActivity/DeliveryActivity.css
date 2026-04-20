@@ -1,0 +1,237 @@
+/* Container */
+.activityContainer {
+  padding: 100px 40px 40px;
+  background: #f0f9f6;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.activityContainer h2 {
+  font-size: 26px;
+  color: #2c4d3a;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+/* Feedback */
+.noActivity {
+  color: #777;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.errorBanner {
+  background: #ffe5e5;
+  border: 1px solid #ffb3b3;
+  color: #b00020;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+}
+
+.loadingSpinner {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2c4d3a;
+  font-weight: 600;
+}
+
+/* Grid / list */
+.deliveryCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.deliveryCard {
+  position: relative;
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #3ca36c;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.deliveryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(26, 86, 64, 0.12);
+}
+
+.deliveryCard.completed {
+  border-left: 5px solid #2b8c5c;
+  background: #eaf8f1;
+}
+
+.deliveryCard.ongoing {
+  border-left: 5px solid #2a9d8f;
+}
+
+.deliveryCard p {
+  margin: 8px 0;
+  color: #2b4739;
+}
+
+/* Header row inside card */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Phase pill: Collection / Distribution */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 0.2px;
+  background: #eef8f3;
+  color: #2c4d3a;
+  border: 1px solid #cfe9dc;
+}
+
+/* Status badge: Assigned / Accepted / In-Transit / Delivered */
+.statusBadge {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.statusBadge.assigned {
+  background: #fff7e6;
+  color: #8a5a00;
+  border: 1px solid #ffe1a6;
+}
+
+.statusBadge.accepted {
+  background: #eaf4ff;
+  color: #135ea3;
+  border: 1px solid #cfe3ff;
+}
+
+.statusBadge.intransit {
+  background: #e6fbff;
+  color: #0b6b70;
+  border: 1px solid #bfeef4;
+}
+
+.statusBadge.delivered {
+  background: #e8fbe9;
+  color: #1f7a47;
+  border: 1px solid #c9f0d1;
+}
+
+/* Actions row */
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.actionBtn,
+.completeBtn {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #3ca36c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(60, 163, 108, 0.25);
+}
+
+.actionBtn:hover,
+.completeBtn:hover {
+  background-color: #2b8c5c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(60, 163, 108, 0.28);
+}
+
+/* Reject controls */
+.rejectGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.rejectInput {
+  min-width: 220px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfe9dc;
+  background: #f7fffb;
+  color: #2c4d3a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rejectInput:focus {
+  border-color: #3ca36c;
+  box-shadow: 0 0 0 4px rgba(60, 163, 108, 0.15);
+}
+
+/* Dismiss / reject button (X or red) */
+.dismissBtn {
+  position: relative; /* used as a regular button next to input */
+  background: #ffecec;
+  border: 1px solid #ffc9c9;
+  color: #c0392b;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 9px 14px;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.12);
+}
+
+.dismissBtn:hover {
+  background: #ffdede;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(192, 57, 43, 0.18);
+}
+
+/* Small success tag under completed cards */
+.statusTag {
+  margin-top: 10px;
+  font-weight: 800;
+  color: #2b8c5c;
+}
+
+/* Responsive tweaks */
+@media (max-width: 680px) {
+  .rejectGroup {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .rejectInput {
+    flex: 1;
+    min-width: 0;
+  }
+  .actionsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .actionBtn,
+  .completeBtn,
+  .dismissBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

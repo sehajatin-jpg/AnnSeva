@@ -1,0 +1,112 @@
+.volunteer-signup-container {
+  width: 450px;
+  height: 600px;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.volunteer-signup-container h2 {
+  font-size: 2.5em;
+  text-decoration: underline;
+  color: #2e2e2e;
+  font-weight: 700;
+  margin: 15px 0 30px 0;
+}
+
+.volunteer-signup-form {
+  width: 100%;
+}
+
+.volunteer-signup-form input,
+.volunteer-signup-form textarea {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  border-radius: 30px;
+  margin: 10px 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: black;
+  box-sizing: border-box;
+}
+
+.volunteer-signup-form textarea {
+  height: 60px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+.volunteer-signup-form input:focus,
+.volunteer-signup-form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #5f7058;
+}
+
+.volunteer-signup-form input::placeholder,
+.volunteer-signup-form textarea::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.volunteer-signup-form button {
+  position: relative;
+  width: 100%;
+  border: 2px solid #5f7058;
+  background-color: #5f7058;
+  height: 40px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  margin: 10px 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.volunteer-signup-form button::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.253);
+  height: 100%;
+  width: 150px;
+  top: 0;
+  left: -200px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  filter: blur(10px);
+  transition-duration: 0.5s;
+}
+
+.volunteer-signup-form button:hover::after {
+  transform: translateX(600px);
+  transition-duration: 0.5s;
+}
+
+.error-msg,
+.success-msg {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: red;
+}
+
+.success-msg {
+  color: green;
+}

@@ -1,0 +1,138 @@
+.donate-page {
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #fdfcfb, #e2d1c3); */
+    background: #f9fbef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Updated donate-card to match reference glassmorphism design */
+  .donate-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    /* background: rgba(217, 217, 217, 0.58); */
+    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(10px);
+    border-radius: 17px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: border 0.3s ease, transform 0.3s ease;
+    user-select: none;
+    animation: slideIn 1s ease;
+  }
+  
+  .donate-card:hover {
+    border: 1px solid black;
+    transform: translateY(-5px); /* subtle lift */
+  }
+  
+  .donate-card:active {
+    transform: scale(0.97) rotateZ(1.5deg);
+  }
+  
+  .donate-card h2 {
+    font-size: 2rem;
+    color: #1e2d50;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .donate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  /* Updated input & textarea styling */
+  .donate-form input,
+  .donate-form textarea {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.65);
+    font-size: 16px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    color: #333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .donate-form input:focus,
+  .donate-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(251, 188, 5, 0.3);
+    transform: scale(1.02);
+  }
+  
+  /* Updated button styling */
+  .donate-form button {
+    padding: 12px;
+    background-color: rgba(95, 112, 88, 0.9);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donate-form button:hover {
+    background-color: rgba(76, 89, 72, 0.95);
+    transform: scale(1.03);
+  }
+  
+  .donate-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .readonly-input {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #555;
+    font-weight: bold;
+    cursor: not-allowed;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

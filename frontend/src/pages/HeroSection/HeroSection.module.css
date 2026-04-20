@@ -1,0 +1,271 @@
+/* 🔹 HERO SECTION */
+.hero {
+  position: relative;
+  padding: 15vh 0 0;
+  background: #f9fbef;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  min-height: auto;
+}
+
+/* 🔹 Heading Container */
+.headingContainer {
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 10px;
+}
+
+/* 🔹 Each Line (Text + Image on same line) */
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto -10px;
+}
+
+.line:first-child {
+  margin-left: 0;
+}
+.line:last-child {
+  margin-left: 5%;
+}
+
+/* 🔹 Text */
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem); /* Responsive font size */
+  font-weight: bold;
+  color: #1e2d50;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* 🔹 Image next to text */
+.line img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+/* 🔹 Bottom Section */
+.bottomContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5f7058;
+  padding: 12vh 0;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 25vh;
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 🔹 Image Wrapper */
+.imageWrapper {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 450px;
+  height: 300px;
+  padding: 8px;
+  background: #fff;
+  border: 5px solid #fbbc05;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* 🔹 Image inside wrapper */
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.oneMeal {
+  color: #fbbc05;
+}
+
+/* 🔹 Zoom Animation */
+.zoomingImage {
+  animation: zoomOutEffect 3s ease-in-out forwards;
+}
+
+/* 🔥 Zoom Out Keyframes */
+@keyframes zoomOutEffect {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 🔹 Text Side */
+.textContent {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.textContent h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem); 
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-left: 40px;
+}
+
+.watchService,
+.watchServices {
+  background: #fbbc05;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 🔹 Optional: Large image container (if used elsewhere) */
+.imageContainer img {
+  width: 1200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 12vh 5% 0;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10vh 0;
+  }
+
+  .imageWrapper {
+    width: 90%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 10vh 5% 0;
+    text-align: center;
+  }
+
+  .headingContainer {
+    text-align: center;
+  }
+
+  .line img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 8vh 0;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8%;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+  }
+
+  .textContent h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ✅ Mobile-specific (Extra small) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 8vh 5% 0;
+  }
+
+  .headingContainer {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .line {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .line img {
+    margin-left: 0;
+  }
+
+  .bottomContainer {
+    padding: 6vh 5%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textContent {
+    margin: 0;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0;
+  }
+
+  .imageWrapper {
+    width: 90%;
+    top: auto;
+    position: relative;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    height: auto;
+  }
+}

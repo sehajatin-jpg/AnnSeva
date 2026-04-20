@@ -1,0 +1,133 @@
+/* Root Variables */
+:root {
+    --primary-color: #ff7f27;
+    --secondary-color: #ff914d;
+    --text-dark: #1e2d50;
+    --text-light: #fff;
+    --bg-light: #f9fbef;
+    --card-bg: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.2);
+    --heading-color: #d9534f;
+  }
+  
+  /* Animated Section */
+  .animated-section {
+    background: var(--bg-light);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .animated-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+  }
+  
+  /* Container for both cards */
+  .animated-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+  }
+  
+  .animated-cards-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Individual Card Styling */
+  .animated-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 580px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px var(--shadow-light);
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .image-card img.impact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-card {
+    padding: 24px;
+    text-align: left;
+  }
+  
+  .text-card h3 {
+    font-size: 22px;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+  }
+  
+  .text-card .highlight {
+    color: var(--text-dark);
+  }
+  
+  .text-card p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  /* Animations */
+  .slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: slideLeft 7s forwards;
+    animation-delay: 2s;
+  }
+  
+  .slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+    animation: slideRight 7s forwards;
+    animation-delay: 2s;
+  }
+  
+  @keyframes slideLeft {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .animated-cards-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .text-card {
+      text-align: center;
+    }
+  
+    .text-card h3 {
+      font-size: 20px;
+    }
+  }
