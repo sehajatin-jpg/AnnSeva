@@ -4,7 +4,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 app.use(cors({
-    origin:process.env.ALLOWED_ORIGIN,
+    origin:["https://ann-seva-gamma.vercel.app",
+        process.env.ALLOWED_ORIGIN],
     credentials:true
 }))
 
